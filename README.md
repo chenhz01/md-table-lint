@@ -2,6 +2,8 @@
 
 md-table-lint lints Markdown tables for four defect classes: inconsistent column counts, malformed alignment rows, missing header rows, and unescaped pipes inside cells. Code fences are skipped automatically. Use it in CI to keep docs tables renderable — a broken table silently renders as garbage text on every static-site generator. Confidence: High (≥80%) for the four rule classes, per the 61-check suite.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Markdown tables fail silently: a row with one missing cell still *renders*, just misaligned; a table whose header was deleted renders the separator row as literal text; a pipe inside a cell (`C:\path | other`) splits into phantom columns. Reviewers catch these by eye, when they catch them at all. Documentation sites accumulate hundreds of tables with no automated gate.
